@@ -1,0 +1,249 @@
+.projects {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.display {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s ease-in-out;
+}
+
+.section__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects__container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: -2rem;
+  /* background-color: hsl(219, 32%, 12%); */
+  /* border: 2px solid hsl(250, 66%, 75%); */
+  /* border-radius: 0.75rem; */
+  padding: 0.75rem 0.5rem;
+}
+
+.projects__filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.projects__filter-box {
+  cursor: pointer;
+  color: var(--title-color);
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: hsl(218, 32%, 24%);
+  /* transition: 0.4s; */
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
+}
+
+.light .projects__filter-box {
+  background-color: var(--container-color);
+}
+
+.active {
+  background-color: var(--first-color);
+  color: black;
+}
+
+.light .active {
+  background-color: var(--first-color);
+  color: black;
+}
+
+.projects__filter-box:hover {
+  background-color: var(--first-color);
+  color: black;
+}
+
+.projects__project {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.projects__card {
+  background-color: var(--container-color);
+  width: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
+}
+
+.projects__img {
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project__title {
+  font-size: 0.938rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.project__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github {
+  background-color: var(--container-color);
+  color: var(--first-color);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  font-size: 1.2rem;
+  transition: 0.4s;
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
+}
+
+.light .github {
+  color: var(--title-color);
+}
+
+.github:hover {
+  background-color: var(--first-color);
+  color: black;
+}
+
+.project__button {
+  color: var(--first-color);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.light .project__button {
+  color: hsl(207, 90%, 60%);
+}
+
+.project__button:hover .arrow_icon {
+  transform: translateX(0.25rem);
+}
+
+.arrow_icon {
+  font-size: 1rem;
+  transition: 0.4s;
+}
+/* .projects__filter-box{
+    width: ;
+} */
+
+.paginationBttns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+  margin-top: 1rem;
+}
+
+.paginationBttns a {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid var(--first-color);
+  color: var(--first-color);
+  border-radius: 0.2rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.paginationBttns a:hover {
+  background-color: hsl(207, 90%, 60%) !important;
+  color: hsl(219, 78%, 8%) !important;
+}
+
+.active a {
+  border-radius: 0.2rem !important;
+  background-color: hsl(207, 90%, 60%);
+  color: hsl(219, 78%, 8%);
+}
+
+.prevBtn {
+  margin-right: 1rem;
+}
+
+.nextBtn {
+  margin-left: 1rem;
+}
+
+.disabled a {
+  background-color: hsl(218, 32%, 24%) !important;
+  cursor: none !important;
+}
+
+.disabled a:hover {
+  background-color: hsl(218, 32%, 24%) !important;
+  cursor: none;
+  color: var(--first-color) !important;
+}
+
+.light .disabled a {
+  background-color: rgb(224, 216, 216) !important;
+  color: rgb(153, 152, 152) !important;
+}
+.light .disabled a:hover {
+  background-color: rgb(224, 216, 216) !important;
+  color: rgb(110, 108, 108);
+}
+
+@media screen and (max-width: 992px) {
+  .projects__container {
+    width: 100%;
+  }
+  .projects__card {
+    width: 200px;
+    padding: 0.5rem;
+  }
+
+  .project__title {
+    font-size: 0.8rem;
+  }
+
+  .github {
+    font-size: 1rem;
+  }
+
+  .project__button {
+    font-size: 0.8rem;
+  }
+
+  .projects__filter-item {
+    font-size: 0.8rem;
+  }
+}
